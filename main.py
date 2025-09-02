@@ -9,7 +9,7 @@ if "responses" not in st.session_state:
 # --- Define dimensions and questions ---
 data = {
     "Data-Driven Culture": [
-        "There is a shared belief and valuesystem that encourages people to understand,use, and optimizate data.",
+        "There is a shared belief and value system that encourages people to understand, use, and optimizate data.",
         "There is a culture that is open to change and innovation."
     ],
     "Organizational Alignment": [
@@ -23,7 +23,7 @@ data = {
         "They have the appropriate skills for the transition towards a data-driven department (e.g. data analytics skills)."
     ],
     "Management's Digital Literacy and Leadership": [
-        "The departmentmanager has anunderstandingof data anddigital literacy.",
+        "The department manager has an understanding of data and digital literacy.",
         "The department manager has the capability to lead the team in the complexities of shifting to a data-driven department."
     ],
     "Access to relevant high-quality data": [
@@ -131,3 +131,4 @@ st.markdown("""
 </p>
 </a>
 """, unsafe_allow_html=True)
+
