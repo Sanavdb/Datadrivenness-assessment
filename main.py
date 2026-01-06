@@ -13,14 +13,14 @@ data = {
         "There is a culture that is open to change and innovation."
     ],
     "Organizational Alignment": [
-        "Data analytics or AI initiatives are in line with their department's overall vision and objectives.",
+        "Data analytics or AI initiatives are in line with this department's overall vision and objectives.",
         "These initiatives comply to the existing company-wide regulations, policies, and standards."
     ],
     "Data Capability": [
-        "They have the appropriate tools for the transition towards a data-driven department (e.g. analytics tools).",
-        "They have the appropriate processes in place for the transition towards a data-driven department (e.g. information transfer process).",
-        "They have the appropriate people in place for the transition towards a data-driven department (e.g. data experts).",
-        "They have the appropriate skills for the transition towards a data-driven department (e.g. data analytics skills)."
+        "There are appropriate tools available for the transition towards a data-driven department (e.g. analytics tools).",
+        "There are appropriate processes in place for the transition towards a data-driven department (e.g. information transfer process).",
+        "There are appropriate people in place for the transition towards a data-driven department (e.g. data experts).",
+        "There are appropriate skills available for the transition towards a data-driven department (e.g. data analytics skills)."
     ],
     "Management's Digital Literacy and Leadership": [
         "The department manager has an understanding of data and digital literacy.",
@@ -28,7 +28,7 @@ data = {
     ],
     "Access to relevant high-quality data": [
         "There is relevant, contextualized, high-quality and harmonized data available.",
-        "They also haveaccess to thisrelevant data."
+        "People in the department also have access to this relevant data."
     ],
     "Data Utilization": [
         "Data-driven insights are used in business decision-making.",
@@ -62,7 +62,7 @@ st.title("📊 Data-drivenness Assessment")
  
 # --- Step 1: Respond to Questions ---
 st.header("Step 1: Respond to Diagnostic Questions")
-st.markdown("_Please rate the extent to which you agree with the following statements based on your experience with your client. Your responses will help identify strengths and improvement areas across six key dimensions._")
+st.markdown("_Please rate the extent to which you agree with the following statements regarding a certain department or company. Your responses will help identify strengths and improvement areas across six key dimensions._")
  
 for dimension, questions in data.items():
     st.subheader(dimension)
@@ -87,7 +87,7 @@ for dimension, questions in data.items():
  
 # --- Step 3: Radar Chart ---
 st.header("Step 2: Review Overall Diagnostic Results")
-st.markdown("_The radar chart below visualizes your client's current state across the six dimensions. Each axis represents one dimension, and the closer to the edge, the stronger the dimension._")
+st.markdown("_The radar chart below visualizes your the current state of the department/company across the six dimensions. Each axis represents one dimension, and the closer to the edge, the stronger the dimension._")
 
  
 categories = list(dimension_scores.keys())
@@ -98,7 +98,7 @@ fig.update_layout( polar=dict(radialaxis=dict(visible=True, range=[1, 5])), show
 st.plotly_chart(fig, config={"staticPlot": True})
 # --- Step 4: Priorities ---
 st.header("Step 3: Identify High Priority Areas")
-st.markdown("_Dimensions scoring below the threshold (3.0) are highlighted here. These are potential focus areas for improvement to enhance your client's data-drivenness._")
+st.markdown("_Dimensions scoring below the threshold (3.0) are highlighted here. These are potential focus areas for improvement to enhance this department/company's data-drivenness._")
 
  
 priority_threshold = 3.0
@@ -122,6 +122,7 @@ st.markdown("""
 </p>
 </a>
 """, unsafe_allow_html=True)
+
 
 
 
