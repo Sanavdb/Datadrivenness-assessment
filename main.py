@@ -93,29 +93,9 @@ st.markdown("_The radar chart below visualizes your client's current state acros
 categories = list(dimension_scores.keys())
 values = list(dimension_scores.values())
  
-fig = go.Figure(
-    data=[go.Scatterpolar(
-        r=values + [values[0]],
-        theta=categories + [categories[0]],
-        fill='toself'
-    )]
-)
-fig.update_layout(
-    polar=dict(
-        radialaxis=dict(visible=True, range=[1, 5])
-    ),
-    showlegend=False,
-    margin=dict(l=200, r=20, t=20, b=20),
-    width=500,
-    height=400
-)
-
-st.plotly_chart(
-    fig,
-    use_container_width=False,  
-    config={"staticPlot": True}
-)
-
+fig = go.Figure( data=[go.Scatterpolar( r=values + [values[0]], theta=categories + [categories[0]], fill='toself' )] ) 
+fig.update_layout( polar=dict(radialaxis=dict(visible=True, range=[1, 5])), showlegend=False ) 
+st.plotly_chart(fig, config={"staticPlot": True})
 # --- Step 4: Priorities ---
 st.header("Step 3: Identify High Priority Areas")
 st.markdown("_Dimensions scoring below the threshold (3.0) are highlighted here. These are potential focus areas for improvement to enhance your client's data-drivenness._")
@@ -142,6 +122,7 @@ st.markdown("""
 </p>
 </a>
 """, unsafe_allow_html=True)
+
 
 
 
