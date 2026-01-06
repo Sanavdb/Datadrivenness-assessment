@@ -103,7 +103,7 @@ fig = go.Figure(
 fig.update_layout(
     polar=dict(radialaxis=dict(visible=True, range=[1, 5])),
     showlegend=False,
-    margin=dict(l=150, r=20, t=20, b=20)
+    margin=dict(l=200, r=20, t=20, b=20)
 )
 st.plotly_chart(fig, config={"staticPlot": True})
 # --- Step 4: Priorities ---
@@ -132,5 +132,6 @@ st.markdown("""
 </p>
 </a>
 """, unsafe_allow_html=True)
+
 
 
